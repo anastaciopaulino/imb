@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block content %}
+	
+
+<h1 style="text-align: center;">Lista de Corretores</h1>	
+
+    <table class="table table-striped">
+
+  <thead>
+    
+    <tr>
+     <th scope="col">ID</th>
+      <th scope="col">NOME</th>
+      <th scope="col">Nº CRI</th>
+      <th scope="col">TELEFONE</th>
+      <th scope="col">EMAIL</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+  	{% for corretor in corretores %}
+    <tr>    	
+      <th scope="row">{{ corretor.id }}</th>      
+      <td>{{ corretor.nome }}</td>
+      <td>{{ corretor.numero_cri }}</td>
+      <td>{{ corretor.telefone }}</td>
+      <td>{{ corretor.email }}</td>
+      <td>
+         <a href="/visualizar_corretor/{{ corretor.id }}"><i class="fa fa-search" aria-hidden="true">Visualizar</i></a>         
+         <a href="/editar_corretor/{{ corretor.id }}"><i class="fa fa-pencil" >Editar</i></a>
+         <a href="/deletar_corretor/{{ corretor.id }}"><i class="fa fa-trash" aria-hidden="true"></i>Deletar</a>  
+      </td>
+    </tr>
+    {% endfor %}    	
+  </tbody>
+
+</table>   
+
+  
+
+{% endblock %}
+
+
+
+
+
+
+
+

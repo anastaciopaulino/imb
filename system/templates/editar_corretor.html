@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Editando dados do "{{Corretor.nome}}"{% endblock %}
+{% block content %}
+
+  <div class="container">
+        <h1  style="text-align: center;">Editar dados do Corretor</h1>
+        <div>
+      <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p }}
+        <input type="submit" class="btn btn-success" style="margin-left: 1050px;" value="Salvar">
+        <input type="button" value="Voltar" style="margin-left: 1100px;" class="btn btn-info" onClick="history.go(-1)">
+        
+      </form>
+    </div>  
+  </div>
+
+{% endblock %}
+
+

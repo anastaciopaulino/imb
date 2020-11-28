@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1 style="text-align: center;">Dados do Corretor</h1>    
+
+     <table class="table table-striped">
+
+  <thead>    
+    <tr>
+     <th scope="col">ID</th>
+      <th scope="col">NOME</th>
+      <th scope="col">Nº CRI</th>
+      <th scope="col">TELEFONE</th>
+      <th scope="col">EMAIL</th>
+    </tr>
+  </thead>
+  
+  <tbody>    
+   <tr>
+        <td>{{corretor.id}}</td>        
+        <td>{{corretor.nome}}</td>
+        <td>{{corretor.numero_cri}}</td>
+        <td>{{corretor.telefone}}</td>
+        <td>{{corretor.endereco}}</td>
+        <td>{{corretor.email}}</td>
+      </tr>
+      
+      </td>
+    </tr>
+       
+  </tbody>
+
+</table>   
+<input type="button" value="Voltar" style="margin-left: 1100px;" class="btn btn-info" onClick="history.go(-1)">
+
+{% endblock %}
+
