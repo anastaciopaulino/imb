@@ -3,26 +3,24 @@
 {% block content %}
 	
 
-<h1 style="text-align: center;">Lista de Corretores</h1>	
+<h1 style="text-align: center;">Lista de Corretores</h1>
+<a style="margin-top: 15px; margin-left: 1200px;" href="{% url 'criar_corretor' %}" class="btn btn-primary">Novo</a>
 
-    <table class="table table-striped">
-
-  <thead>
-    
+<table class="table">
+  <thead class="thead-dark">
     <tr>
-     <th scope="col">ID</th>
+      <th scope="col">ID</th>
       <th scope="col">NOME</th>
       <th scope="col">Nº CRI</th>
       <th scope="col">TELEFONE</th>
       <th scope="col">EMAIL</th>
-
+      <th scope="col">AÇÕES</th>
     </tr>
   </thead>
-
   <tbody>
-  	{% for corretor in corretores %}
-    <tr>    	
-      <th scope="row">{{ corretor.id }}</th>      
+    {% for corretor in corretores %}
+    <tr>
+      <th scope="row">{{ corretor.id }}</th> 
       <td>{{ corretor.nome }}</td>
       <td>{{ corretor.numero_cri }}</td>
       <td>{{ corretor.telefone }}</td>
@@ -33,13 +31,9 @@
          <a href="/deletar_corretor/{{ corretor.id }}"><i class="fa fa-trash" aria-hidden="true"></i>Deletar</a>  
       </td>
     </tr>
-    {% endfor %}    	
+    {% endfor %}        	
   </tbody>
-
-</table>   
-
-  
-
+</table>
 {% endblock %}
 
 

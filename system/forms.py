@@ -1,5 +1,6 @@
 from django.forms import ModelForm
-from .models import Corretor, Imovel
+from .models import Corretor
+from .models import Imovel
 from django import forms
 
 class CorretorForm(ModelForm):

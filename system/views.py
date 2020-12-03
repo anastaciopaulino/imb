@@ -3,7 +3,7 @@ from . import forms, models
 from django.http import HttpResponse
 from .models import Corretor, Imovel
 from django.views.generic import ListView
-from .forms import CorretorForm
+from .forms import CorretorForm, ImovelForm
 
 
 
@@ -25,12 +25,9 @@ def createCorretor(request):
     return render(request, 'cadastrar_corretor.html',{'form':form} )
 
 
-
 def visualizarCorretor(request, id):
     corretor = get_object_or_404(Corretor, pk=id)
     return render(request, 'visualizar_corretor.html', {'corretor': corretor})
-
-
 
 
 def editarCorretor(request, id):
@@ -44,8 +41,7 @@ def editarCorretor(request, id):
         else:
             return render(request, 'editar_corretor.html', {'form': form, 'corretor':corretor})
     else:
-        return render(request, 'editar_corretor.html', {'form': form, 'corretor':corretor})               
-        
+        return render(request, 'editar_corretor.html', {'form': form, 'corretor':corretor})        
 
 
 def deleteCorretor(request, id):
@@ -53,8 +49,7 @@ def deleteCorretor(request, id):
     corretor = Corretor.objects.get(id=id)  
     corretor.delete()  
     return redirect('/lista_corretores')
-    return render(request, 'deletar_corretor.html',{'form':form}) 
-
+    return render(request, 'deletar_corretor.html',{'form':form})
 
 
 
@@ -73,15 +68,12 @@ def createImovel(request):
         if form.is_valid():
             form.save()
             return redirect('/lista_imoveis')
-    return render(request, 'cadastrar_imovel.html',{'form':form} )
-
+    return render(request, 'cadastrar_imovel.html',{'form':form})
 
 
 def visualizarImovel(request, id):
     imovel = get_object_or_404(Imovel, pk=id)
     return render(request, 'visualizar_imovel.html', {'imovel': imovel})
-
-
 
 
 def editarImovel(request, id):
@@ -95,8 +87,7 @@ def editarImovel(request, id):
         else:
             return render(request, 'editar_imovel.html', {'form': form, 'imovel':imovel})
     else:
-        return render(request, 'editar_imovel.html', {'form': form, 'imovel':imovel})               
-        
+        return render(request, 'editar_imovel.html', {'form': form, 'imovel':imovel})        
 
 
 def deleteImovel(request, id):

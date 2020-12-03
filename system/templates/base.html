@@ -11,23 +11,19 @@
     
 </head>
 <body>
-
-<header class="navbar navbar-dark bg-dark">
+<h1>Imóveis Cadastrados</h1>
+<header>
+    <nav class="navbar navbar-dark bg-dark">
     <div class="container">
+        <h1>Imóveis Cadastrados</h1>
        <a href="{% url 'lista_corretores' %}" class="btn btn-secondary">Painel Administrativo</a>
-        <div class="right">            
-            <a href="{% url 'criar_corretor' %}" class="btn btn-primary">Novo</a>            
-            
+        <div class="right">        
         </div><!--right-->
     </div><!--container-->        
-</header>
-    
+</header>    
 </div><!--container-->
-
 </body>
     {% block content %}
-    {% endblock %}      
-
-
+    {% endblock %}
 </html>
 

@@ -1,38 +1,48 @@
-
-{% load static %}
-
+{% extends 'base.html' %}
+{% load bootstrap %}
 {% block content %}
 
-
-<h1>Lista de Imóveis</h1>
-
-<ul>
-
-	{% for imovel in imoveis %}
-		
-		<li>{{ imovel.id }}</li>
-
-		<li><img vspace="35px" hspace="15px" src="/media/{{ imovel.imagem }}" width=350 height=350></li>
-		<li></li>
-		<li>{{ imovel.titulo }}</li>
-		<li>{{ imovel.categoria }}</li>
-		<li>{{ imovel.descricao }}</li>
-		<li>{{ imovel.endereco }}</li>		
-		<li>{{ imovel.negocio }}</li>
-		<li>{{ imovel.area }}</li>
-		<li>{{ imovel.status }}</li>
-		<li>{{ imovel.num_quarto }}</li>
-		<li>{{ imovel.num_banheiro }}</li>
-		<li>{{ imovel.num_vaga }}</li>
-		<li>{{ imovel.status }}</li>
-		<li>{{ imovel.corretor }}</li>
-		
-		
-	
-	{% endfor %}
+<h1>Imóveis Cadastrados</h1>
+<a style="margin-top: 15px; margin-left: 1200px;" href="{% url 'criar_imovel' %}" class="btn btn-primary">Novo</a>
 
 
-</ul>
-
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">IMÓVEL</th>
+      <th scope="col">CATEGORIA</th>      
+      <th scope="col">NEGOCIO</th>
+      <th scope="col">ÁREA</th>
+      <th scope="col">N QUARTO</th>
+      <th scope="col">N BANHEIRO</th>
+      <th scope="col">N VAGA</th>
+      <th scope="col">STATUS</th>
+      <th scope="col">ENDEREÇO</th>
+      <th scope="col">CORRETOR</th>
+      <th scope="col">AÇÕES</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for imovel in imoveis %}
+    <tr>
+      <th scope="row">{{ imovel.titulo }}</th> 
+      <td>{{ imovel.categoria }}</td>    
+      <td>{{ imovel.negocio }}</td>
+      <td>{{ imovel.area }}</td>
+      <td>{{ imovel.num_quarto }}</td>
+      <td>{{ imovel.num_banheiro }}</td>
+      <td>{{ imovel.num_vaga }}</td>
+      <td>{{ imovel.status }}</td>
+      <td>{{ imovel.endereco }}</td>
+      <td>{{ imovel.corretor }}</td>
+      <td>
+         <a href="/visualizar_corretor/{{ corretor.id }}"><i class="fa fa-search" aria-hidden="true">Visualizar</i></a>         
+         <a href="/editar_corretor/{{ corretor.id }}"><i class="fa fa-pencil" >Editar</i></a>
+         <a href="/deletar_corretor/{{ corretor.id }}"><i class="fa fa-trash" aria-hidden="true"></i>Deletar</a>  
+      </td>
+    </tr>
+    {% endfor %}        	
+  </tbody>
+</table>
 {% endblock %}
 

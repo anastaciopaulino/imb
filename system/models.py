@@ -25,8 +25,8 @@ NEGOCIO = (
 class Imovel(models.Model):
 	id = models.BigAutoField(primary_key=True)
 	imagem = models.FileField (upload_to = 'media/', blank=True, null=True)	
-	categoria = models.IntegerField(choices=CATEGORIA, default=0)
-	negocio = models.IntegerField(choices=NEGOCIO, default=0)
+	categoria = models.TextField(choices=CATEGORIA, default=0)
+	negocio = models.TextField(choices=NEGOCIO, default=0)
 	titulo = models.CharField(max_length=250, unique=True)
 	endereco = models.CharField(max_length=300, unique=True)
 	area = models.IntegerField(unique=True)
@@ -35,12 +35,12 @@ class Imovel(models.Model):
 	num_vaga = models.IntegerField(unique=True)
 	descricao = models.TextField(unique=True)
 	corretor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='system_imoveis')
-	status = models.IntegerField(choices=STATUS, default=0)
+	status = models.TextField(choices=STATUS, default=0)
 
 	class Meta:
 		verbose_name = "Imóvel"
 		verbose_name_plural = "Imóveis"
-		ordering = ['-titulo']
+		ordering = ['-pk']
 
 	def __str__(self):
 		return self.titulo
