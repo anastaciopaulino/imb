@@ -1811,6 +1811,7 @@
 }
 .fa-train:before {
   content: "\f238";
+  columns: #7444ff;
 }
 .fa-subway:before {
   content: "\f239";

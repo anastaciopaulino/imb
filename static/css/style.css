@@ -252,7 +252,7 @@ ul.navbar-nav.ml-auto {
 /* banner */
 
 .bannerbg-w3l {
-    background: url(../images/1.jpg) no-repeat 0px 0px;
+    
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -309,7 +309,7 @@ button.submit:hover {
 /* banner-bottom */
 
 .serach-w3agile {
-    background: #0ebeff;
+    background: #2f4873;
 }
 
 h3.title-w3ls {
@@ -365,7 +365,7 @@ h3.title-w3ls {
 /* middle section */
 
 .middle-w3l {
-    background: url(../images/bg.jpg) no-repeat right;
+
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -428,7 +428,7 @@ h3.tittle {
 /* pricing */
 
 .pricing {
-    background: url(../images/bb2.jpg) no-repeat bottom;
+   
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -619,7 +619,7 @@ ul.testi-w3ls-rate li i {
 /* footer top */
 
 .footer-top {
-    background: url(../images/bg3.jpg) no-repeat bottom;
+    background: url(../images/03.jpg) no-repeat bottom;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
