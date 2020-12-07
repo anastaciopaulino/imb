@@ -1,19 +1,17 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+{% load static %}
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="pt-br">
 
 <head>
-	<title>District Real Estates Category Bootstrap Responsive website Template | Portfolio :: W3layouts</title>
+	<title>
+
+	Ronaldo Santos Imóveis
+	</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
-	<meta name="keywords" content="District Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+	<meta name="keywords" content=""
 	/>
 	<script>
 		addEventListener("load", function () {
@@ -25,15 +23,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		}
 	</script>
 	<!--// Meta tag Keywords -->
+<style>
+	.banner{
+		background: url("{% static 'images/01.jpg' %}") no-repeat 0px 0px;	
+	}	
 
+
+</style>
 	<!-- Custom-Files -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href='{% static "css/bootstrap.css" %}'>
 	<!-- Bootstrap-Core-CSS -->
-	<!-- gallery  -->
-	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href='{% static "css/style.css" %}' type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<link rel="stylesheet" href='{% static "css/fontawesome-all.css" %}'>
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
@@ -46,7 +48,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <body>
 	<!-- banner -->
-	<div class="bannerbg-w3l bannerbg-w3l-inner">
+	<div class="banner">		
 		<!-- header -->
 		<header>
 			<div class="header_topw3layouts_bar">
@@ -56,10 +58,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="col-xl-7 col-lg-6 header_agileits_left">
 							<ul>
 								<li class="mr-3">
-									<i class="fas fa-phone mr-2"></i> +(010) 221 918 811</li>
+									<i class="fas fa-phone mr-2"></i> +(55) 83 99602 4822</li>
 								<li>
 									<i class="fas fa-envelope mr-2"></i>
-									<a href="mailto:info@example.com">info@example.com</a>
+									<a href="mailto:imoveis.ronaldosantos@gmail.com">imoveis.ronaldosantos@gmail.com</a>
 								</li>
 							</ul>
 						</div>
@@ -74,31 +76,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											</a>
 										</li>
 										<li class="px-2">
-											<a href="#" class="rounded-circle">
-												<i class="fab fa-google-plus-g"></i>
+											<a href="https://www.instagram.com/corretordeimoveisemjoaopessoa/" target="_blank" class="rounded-circle">
+												<i class="fab fa-instagram"></i>
 											</a>
-										</li>
-										<li>
-											<a href="#" class="rounded-circle">
-												<i class="fab fa-twitter"></i>
-											</a>
-										</li>
+										</li>										
 										<li class="pl-2">
-											<a href="#" class="rounded-circle">
-												<i class="fab fa-dribbble"></i>
+											<a href="https://www.youtube.com/channel/UCTEICunBg5PUPpeS26eLzXw?sub_confirmation=1" target="_blank" class="rounded-circle">
+												<i class="fab fa-youtube"></i>
 											</a>
 										</li>
 									</ul>
 								</div>
 								<!-- //social icons -->
 								<div class="col-4 header-loginw3ls text-lg-right text-center">
-									<a href="#" class="log" data-toggle="modal" data-target="#exampleModalCenter1">
+									<a href="" class="log" data-toggle="modal" data-target="#exampleModalCenter1">
 										<i class="fas fa-user mr-2"></i> Login</a>
-								</div>
-								<div class="col-4 header-loginw3ls">
-									<a href="#" class="log" data-toggle="modal" data-target="#exampleModalCenter2">
-										<i class="fas fa-key mr-2"></i> Register</a>
-								</div>
+								</div>								
 							</div>
 						</div>
 					</div>
@@ -106,8 +99,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					<!-- navigation -->
 					<nav class="navbar navbar-expand-lg navbar-light bg-light">
-						<a class="navbar-brand" href="#">District
-							<span>Real Property</span>
+						<a class="navbar-brand" href="index.html">Ronaldo Santos
+							<span>Corretor de Imóveis</span>
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						    aria-expanded="false" aria-label="Toggle navigation">
@@ -116,32 +109,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav ml-auto">
-								<li class="nav-item">
+								<li class="nav-item active">
 									<a class="nav-link" href="index.html">Home
 										<span class="sr-only">(current)</span>
 									</a>
 								</li>
 								<li class="nav-item mx-xl-4 mx-lg-3 my-lg-0 my-3">
-									<a class="nav-link" href="about.html">About Us</a>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-									    aria-expanded="false">
-										Dropdown
-									</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="index.html">Services</a>
-										<a class="dropdown-item" href="index.html">Pricings</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="about.html">Clients</a>
-										<a class="dropdown-item" href="about.html">Our Agents</a>
-									</div>
-								</li>
-								<li class="nav-item  active mx-xl-4 mx-lg-3 my-lg-0 my-3">
-									<a class="nav-link" href="portfolio.html">Portfolio</a>
+									<a class="nav-link" href="about.html">Quem Sou</a>
+								</li>								
+								<li class="nav-item mx-xl-4 mx-lg-3 my-lg-0 my-3">
+									<a class="nav-link" href="imoveis/">Imóveis</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="contact.html">Contact Us</a>
+									<a class="nav-link" href="contact.html">Meus Contatos</a>
 								</li>
 							</ul>
 						</div>
@@ -155,13 +135,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="banner-w3ltext about-w3bnr">
 			<div class="container">
 				<h1 class="text-white text-center">
-					<a href="index.html">Home</a> / Portfolio</h1>
+					<a href="index.html">Home</a> / Imóveis</h1>
 			</div>
 		</div>
 		<!-- //banner-text -->
 	</div>
 	<!-- login -->
-	<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header text-center">
@@ -171,17 +151,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="modal-body">
 					<div class="login px-4 mx-auto mw-100">
-						<h5 class="text-center mb-4">Login Now</h5>
+						<h5 class="text-center mb-4">Login Agora</h5>
 						<form action="#" method="post">
 							<div class="form-group">
-								<label>Username</label>
+								<label>Usuário</label>
 								<input type="text" class="form-control" name="text" placeholder="" required="">
 							</div>
 							<div class="form-group">
-								<label class="mb-2">Password</label>
+								<label class="mb-2">Senha</label>
 								<input type="password" class="form-control" name="password" placeholder="" required="">
 							</div>
-							<button type="submit" class="btn btn-primary submit mb-4">Login</button>
+							<button type="submit" class="btn btn-primary submit mb-4">Logar</button>
 							<p class="text-center pb-4">
 								<a href="#">Forgot your password?</a>
 							</p>
@@ -451,9 +431,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- Js files -->
 	<!-- JavaScript -->
-	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src='{% static "js/jquery-2.2.3.min.js" %}'></script>
 	<!-- Default-JavaScript-File -->
-	<script src="js/bootstrap.js"></script>
+	<script src='{% static "js/bootstrap.js" %}'></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
 
 	<!-- password-script -->
@@ -476,24 +456,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //password-script -->
 
 	<!-- smooth scrolling -->
-	<script src="js/SmoothScroll.min.js"></script>
+	<script src='{% static "js/SmoothScroll.min.js" %}'></script>
 	<!-- //smooth scrolling -->
 
 	<!-- move-top -->
-	<script src="js/move-top.js"></script>
+	<script src='{% static "js/move-top.js" %}'></script>
 	<!-- easing -->
-	<script src="js/easing.js"></script>
+	<script src='{% static "js/easing.js" %}'></script>
 	<!--  necessary snippets for few javascript files -->
-	<script src="js/district.js"></script>
+	<script src='{% static "js/district.js" %}'></script>
 
-	<script src="js/bootstrap.js"></script>
+	<script src='{% static "js/bootstrap.js" %}'></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
 
 	<!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
-	<script src="js/jquery-1.7.2.js"></script>
-	<script src="js/jquery.quicksand.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/jquery.prettyPhoto.js"></script>
+	<script src='{% static "js/jquery-1.7.2.js" %}'></script>
+	<script src='{% static "js/jquery.quicksand.js" %}'></script>
+	<script src='{% static "js/script.js" %}'></script>
+	<script src='{% static "js/jquery.prettyPhoto.js" %}'></script>
 	<!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
 	<!-- //Js files -->
 
