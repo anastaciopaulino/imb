@@ -61,9 +61,11 @@ h3,
 h4,
 h5,
 h6 {
+    color: #ffffff !important;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+
 }
 
 p {
@@ -142,7 +144,7 @@ a:hover {
 
 .header_agileits_left ul li i,
 .header-loginw3ls i {
-    color: #0074cb !important; 
+    color: #0074cb; 
 }
 
 .header_right a {
@@ -152,7 +154,7 @@ a:hover {
 }
 
 .header-loginw3ls a:hover {
-    color: #ff3c41;
+    color: #0074cb;
 }
 
 /* social icons */
@@ -198,7 +200,7 @@ a:hover {
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
     color: #fff;
-    border-bottom: 2px solid #ff3c41;
+    border-bottom: 2px solid ##0074cb;
 }
 
 .navbar-light .navbar-brand {
@@ -217,7 +219,7 @@ a:hover {
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
     color: #fff;
-    border-bottom: 2px solid #ff3c41;
+    border-bottom: 2px solid #0074cb;
 }
 
 a.navbar-brand span {
@@ -281,7 +283,7 @@ h4.text-uppercase {
 
 a.banner-button,
 button.submit {
-    background: #ff3c41;
+    background: #0074cb;
     color: #fff;
     letter-spacing: 1px;
     border: none;
@@ -336,7 +338,7 @@ h3.title-w3ls {
 
 .place-grid input[type="submit"] {
     width: 100%;
-    background: #ff3c41;
+    background: #0074cb;
     border: none;
     outline: none;
     color: #fff;
@@ -398,7 +400,7 @@ h3.title-w3ls {
 }
 
 .left-build-wthree ul li i {
-    color: #ff3c41;
+    color: #0074cb;
     font-size: 26px;
 }
 
@@ -420,7 +422,7 @@ h3.tittle {
 
 .what-left i {
     font-size: 34px;
-    color: #ff3c41;
+    color: #0074cb;
 }
 
 /* //services */
@@ -614,12 +616,17 @@ ul.testi-w3ls-rate li i {
     font-size: 12px;
 }
 
-/* //testimonials */
-
+/* //cards */
+.collapse-content .fa.fa-heart:hover {
+  color: #f44336 !important;
+}
+.collapse-content .fa.fa-share-alt:hover {
+  color: #0d47a1 !important;
+}
 /* footer top */
 
 .footer-top {
-    background: url(../images/03.jpg) no-repeat bottom;
+    background: url(../images/bg-01.jpg) no-repeat bottom;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -681,14 +688,14 @@ ul.testi-w3ls-rate li i {
     height: 50px;
     text-align: center;
     line-height: 2.4;
-    border: 2px solid #ff3c41;
+    border: 2px solid #0074cb;
 }
 
 .w3social-icons-footer ul li a:hover {
-    color: #ff3c41;
-    -webkit-box-shadow: 0px 0px 13px 2px #ff3c41;
-    -moz-box-shadow: 0px 0px 13px 2px #ff3c41;
-    box-shadow: 0px 0px 13px 2px #ff3c41;
+    color: #0074cb;
+    -webkit-box-shadow: 0px 0px 13px 2px #0074cb;
+    -moz-box-shadow: 0px 0px 13px 2px #0074cb;
+    box-shadow: 0px 0px 13px 2px #0074cb;
 }
 
 /*//social-icons footer */
@@ -725,7 +732,7 @@ ul.testi-w3ls-rate li i {
 }
 
 .banner-w3ltext.about-w3bnr h1 a {
-    color: #ff3c41;
+    color: #0074cb;
 }
 
 .map h4 {
@@ -814,12 +821,12 @@ ul.portfolio-area li figure {
     font-size: 1.6em;
     width: 70px;
     height: 70px;
-    border: 2px solid #ff3c41;
+    border: 2px solid #0074cb;
     text-align: center;
     border-radius: 50%;
     line-height: 2.5;
     box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.25);
-    background: #ff3c41;
+    background: #0074cb;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -896,7 +903,7 @@ ul.portfolio-area li figure {
 }
 
 .desoSlide-overlay h3 {
-    color: #ff3c41;
+    color: #0074cb;
     font-size: 22px;
     margin-bottom: 15px;
     font-weight: 800;
