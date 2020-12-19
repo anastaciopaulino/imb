@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html5>
+<html lang="pt-br">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Ronaldo Santos Imóveis</title>
+<meta charset="UTF-8">
+<link href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="main">
+	
+	<div class="login-form">
+		<div class="form-title">
+			<h2>Login</h2>
+			<i class="fa fa-lock"></i>
+		</div>
+		
+		<div class="logintop"> 	
+			<form action="#" method="post">
+				{% csrf_token %}				 
+				<input type="text" name="user name" placeholder="Usuário" required>
+				<input type="password" name="Password" placeholder="Senha" required>
+				<input type="submit" value="Login"> 
+			</form> 	
+		</div>
+		 
+	</div><!--login-form--> 
+	
+</div><!--main--> 
+
+</body>
+</html>
+
+

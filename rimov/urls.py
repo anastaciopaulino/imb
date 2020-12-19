@@ -8,10 +8,14 @@ from system import views
 
 urlpatterns = [
 
-	path('accounts/', include('django.contrib.auth.urls')),
 	path('admin/', admin.site.urls),
+	path('accounts/', include('django.contrib.auth.urls')),
+	
 	path('', TemplateView.as_view(template_name="index.html")),
 	path('painel/', TemplateView.as_view(template_name="painel.html")),
+	
+	
+	
 	path('painel/imoveis/', TemplateView.as_view(template_name="imoveis.html")),	
 	path('painel/google_maps/', TemplateView.as_view(template_name="google_maps.html")),
 	

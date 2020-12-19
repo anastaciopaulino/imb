@@ -18,7 +18,8 @@ CATEGORIA = (
 NEGOCIO = (
 	(0, "Aluguel"),
 	(1, "Arrendamento"),
-	(2, "Venda")
+	(2, "Em Construção"),
+	(3, "Venda")
 
 ) 
 
