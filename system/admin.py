@@ -8,9 +8,9 @@ class ImoGal(admin.TabularInline):
 
 @admin.register(Imovel)
 class ImovelAdmin(admin.ModelAdmin):
-	list_display = ('id', 'titulo','endereco','descricao','corretor', 'status',
-						'negocio', 'area','num_quarto','num_banheiro','num_vaga',
-													 'status', 'corretor')
+	list_display = ('id', 'titulo', 'propriedade', 'negocio', 'categoria', 'imagem', 
+					'localizacao', 'endereco', 'area', 'num_quarto', 'num_banheiro',
+					'num_vaga', 'descricao', 'corretor', 'status')
 	list_filter = ('status',)
 	search_fields = ['titulo', 'corretor']
 	inlines=[ImoGal]

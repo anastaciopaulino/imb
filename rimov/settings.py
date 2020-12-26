@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles', 
     'bootstrapform',         
-    'system',       
+    'system',      
+       
           
 ]
 
@@ -105,6 +106,14 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+#Login#
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = '/painel/'
+
+
+LOGIN_URL = "/login/"
+LOGIN_URL_REDIRECT = "painel/"
 
 # CONFIGS
 # Static files (CSS, JavaScript, Images)

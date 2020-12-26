@@ -1,4 +1,5 @@
 {% load static %}
+{% block content %}
 
 <!DOCTYPE html5>
 <html lang="pt-br">
@@ -56,7 +57,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
+          <p class="centered"><a href=""><img src="images/logoRS.jpg" class="img-circle" width="80"></a></p>
           <h5 class="centered">Ronaldo Santos </h5>
           <li class="mt">
             <a href="">
@@ -66,35 +67,31 @@
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-desktop"></i>
+              <i class="fa fa-users"></i>
               <span>Corretores</span>
               </a>
             <ul class="sub">
-              <li><a href="lista_corretores/">Lista de Corretores</a></li>
-              <li><a href="criar_corretor/">Cadastrar Corretor</a></li>
-              <li><a href="panels.html">Panels</a></li>
-              <li><a href="font_awesome.html">Font Awesome</a></li>
+              <li><a href="{% url 'criar_corretor' %}">Cadastrar Corretor</a></li>
+              <li><a href="{% url 'lista_corretores' %}">Lista de Corretores</a></li>
+              
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-cogs"></i>
+              <i class="fa fa-home"></i>
               <span>Imóveis</span>
               </a>
             <ul class="sub">
-              <li><a href="imoveis/">Lista de Imóveis</a></li>
-              <li><a href="criar_imovel/">Cadastrar Imóvel</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="todo_list.html">Todo List</a></li>
-              <li><a href="dropzone.html">Dropzone File Upload</a></li>
-              <li><a href="inline_editor.html">Inline Editor</a></li>
-              <li><a href="file_upload.html">Multiple File Upload</a></li>
+              <li><a href="{% url 'criar_imovel' %}">Cadastrar Imóvel</a></li>
+              <li><a href="{% url 'lista_imoveis' %}">Lista de Imóveis</a></li>
+              
+    
             </ul>
           </li>          
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-comments-o"></i>
-              <span>Chat</span>
+              <span>Mensagens</span>
               </a>
             <ul class="sub">
               <li><a href="lobby.html">Lobby</a></li>
@@ -102,10 +99,7 @@
             </ul>
           </li>
           <li>
-            <a href="google_maps/">
-              <i class="fa fa-map-marker"></i>
-              <span>Google Maps </span>
-              </a>
+            
           </li>
         </ul>
         <!-- sidebar menu end-->
@@ -152,9 +146,9 @@
                         <i class="fa fa-angle-down "></i>
                         </a>
                       <ul class="dropdown-menu">
-                        <li><a href="#"> None</a></li>
-                        <li><a href="#"> Read</a></li>
-                        <li><a href="#"> Unread</a></li>
+                        <li><a href="#"> Disponível</a></li>
+                        <li><a href="#"> Indisponível</a></li
+                        
                       </ul>
                     </div>
                   </div>
@@ -165,24 +159,12 @@
                   </div>
                   <div class="btn-group hidden-phone">
                     <a data-toggle="dropdown" href="#" class="btn mini blue">
-                      More
+                      Mais
                       <i class="fa fa-angle-down "></i>
                       </a>
                     <ul class="dropdown-menu">
-                      <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-                      <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                    </ul>
-                  </div>
-                  <div class="btn-group">
-                    <a data-toggle="dropdown" href="#" class="btn mini blue">
-                      Move to
-                      <i class="fa fa-angle-down "></i>
-                      </a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-                      <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+                      <li><a href="#"><i class="fa fa-pencil"></i> Editar </a></li>
+                      <li><a href="#"><i class="fa fa-ban"></i> Visualisar</a></li>
                       <li class="divider"></li>
                       <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
                     </ul>
@@ -197,6 +179,7 @@
                     </li>
                   </ul>
                 </div>
+
                 <div class="table-inbox-wrap ">
                   <table class="table table-inbox table-hover">
                     <tbody>
@@ -205,7 +188,7 @@
                           <input type="checkbox" class="mail-checkbox">
                         </td>
                         <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message  dont-show"><a href="mail_view.html">Google Inc.</a></td>
+                        <td class="view-message  dont-show"><a href="{{titulo.imovel}}">{{ imovel.id }}</a></td>
                         <td class="view-message "><a href="mail_view.html">Your new account is ready.</a></td>
                         <td class="view-message  inbox-small-cells"><i class="fa fa-paperclip"></i></td>
                         <td class="view-message  text-right">08:10 AM</td>
@@ -215,7 +198,7 @@
                           <input type="checkbox" class="mail-checkbox">
                         </td>
                         <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Mark Thompson</a></td>
+                        <td class="view-message dont-show"><a href="{{titulo.imovel}}">Mark Thompson</a></td>
                         <td class="view-message"><a href="mail_view.html">Last project updates</a></td>
                         <td class="view-message inbox-small-cells"></td>
                         <td class="view-message text-right">March 15</td>
@@ -370,6 +353,7 @@
       </section>
       <!-- /wrapper -->
     </section>
+    {% endblock %}
     <!-- /MAIN CONTENT -->
     <!--main content end-->
     <!--footer start-->
@@ -385,7 +369,7 @@
             Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
             Licensing information: https://templatemag.com/license/
           -->
-          Criado por  <a href="#">Yspilom</a>
+          Criado por  <a href="#">Gorillas Tech</a>
         </div>
         <a href="inbox.html#" class="go-top">
           <i class="fa fa-angle-up"></i>

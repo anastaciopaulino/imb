@@ -1,5 +1,4 @@
-{% extends 'base.html' %}
-{% load bootstrap %}
+{% extends 'painel.html' %}
 {% block content %}
 
 <h1>Imóveis Cadastrados</h1>
@@ -7,42 +6,41 @@
 
 
 <table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">IMÓVEL</th>
-      <th scope="col">CATEGORIA</th>      
-      <th scope="col">NEGOCIO</th>
-      <th scope="col">ÁREA</th>
-      <th scope="col">N QUARTO</th>
-      <th scope="col">N BANHEIRO</th>
-      <th scope="col">N VAGA</th>
-      <th scope="col">STATUS</th>
-      <th scope="col">ENDEREÇO</th>
-      <th scope="col">CORRETOR</th>
-      <th scope="col">AÇÕES</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for imovel in imoveis %}
-    <tr>
-      <th scope="row">{{ imovel.titulo }}</th> 
-      <td>{{ imovel.categoria }}</td>    
-      <td>{{ imovel.negocio }}</td>
-      <td>{{ imovel.area }}</td>
-      <td>{{ imovel.num_quarto }}</td>
-      <td>{{ imovel.num_banheiro }}</td>
-      <td>{{ imovel.num_vaga }}</td>
-      <td>{{ imovel.status }}</td>
-      <td>{{ imovel.endereco }}</td>
-      <td>{{ imovel.corretor }}</td>
-      <td>
-         <a href="/visualizar_corretor/{{ corretor.id }}"><i class="fa fa-search" aria-hidden="true">Visualizar</i></a>         
-         <a href="/editar_corretor/{{ corretor.id }}"><i class="fa fa-pencil" >Editar</i></a>
-         <a href="/deletar_corretor/{{ corretor.id }}"><i class="fa fa-trash" aria-hidden="true"></i>Deletar</a>  
-      </td>
-    </tr>
-    {% endfor %}        	
-  </tbody>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">IMÓVEL</th>
+            <th scope="col">CATEGORIA</th>
+            <th scope="col">NEGOCIO</th>
+            <th scope="col">ÁREA</th>
+            <th scope="col">N QUARTO</th>
+            <th scope="col">N BANHEIRO</th>
+            <th scope="col">N VAGA</th>
+            <th scope="col">STATUS</th>
+            <th scope="col">ENDEREÇO</th>
+            <th scope="col">CORRETOR</th>
+            <th scope="col">AÇÕES</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for imovel in imoveis %}
+        <tr>
+            <th scope="row">{{ imovel.titulo }}</th>
+            <td>{{ imovel.categoria }}</td>
+            <td>{{ imovel.negocio }}</td>
+            <td>{{ imovel.area }}</td>
+            <td>{{ imovel.num_quarto }}</td>
+            <td>{{ imovel.num_banheiro }}</td>
+            <td>{{ imovel.num_vaga }}</td>
+            <td>{{ imovel.status }}</td>
+            <td>{{ imovel.endereco }}</td>
+            <td>{{ imovel.corretor }}</td>
+            <td>
+                <a href="/visualizar_corretor/{{ corretor.id }}"><i class="fa fa-search" aria-hidden="true">Visualizar</i></a>
+                <a href="/editar_corretor/{{ corretor.id }}"><i class="fa fa-pencil" >Editar</i></a>
+                <a href="/deletar_corretor/{{ corretor.id }}"><i class="fa fa-trash" aria-hidden="true"></i>Deletar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
 </table>
 {% endblock %}
-

@@ -1,15 +1,3 @@
-/**
-* Template Name: Dashio
-* Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-* Author: TemplateMag.com
-* License: https://templatemag.com/license/
-*/
-/*
-Template Name: DASHIO - Bootstrap 3.1.1 Admin Theme
-Template Version: 1.0
-Author: Carlos Alvarez
-Website: http://Alvarez.is/
-*/
 
 /* Import fonts */
 @import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
@@ -3484,3 +3472,6 @@ ul.chat-available-user li a:hover {
 #copyrights a {
   color: #fff;
 }
+
+
+/* LOGIN */

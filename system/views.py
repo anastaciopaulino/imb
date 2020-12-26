@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from .models import Corretor, Imovel
 from django.views.generic import ListView
 from .forms import CorretorForm, ImovelForm
+from django.conf import settings
 
 
 
@@ -96,4 +97,30 @@ def deleteImovel(request, id):
     imovel.delete()  
     return redirect('/lista_imoveis')
     return render(request, 'deletar_imovel.html',{'form':form})
+
+
+
+#Login#
+def login_page(request):
+    context = {
+        'error_msg': ''
+    }
+    
+    if request.user.is_authenticated:
+        return redirect(settings.LOGIN_REDIRECT_URL)
+
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect(settings.LOGIN_URL_REDIRECT)
+        else:
+            context = {
+                'error_msg': 'Senha e/ou usuário inválido.'
+            }
+            return render(request, 'registration/login.html', context)
+
+    return render(request, 'registration/login.html', context)
 

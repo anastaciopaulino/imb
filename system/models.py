@@ -7,6 +7,21 @@ STATUS = (
 	(1, "Indisponível")
 
 )
+TIPO_PROPRIEDADE =(
+	(0, "Apartamento"),
+	(1, "Casa"),
+	(2, "Casa Condomínio"),
+	(3, "Casa Vila"),
+	(4, "Cobertura"),
+	(5, "Comercial"),
+	(6, "Fazenda"),
+	(7, "Flat"),
+	(8, "Kitnet"),
+	(9, "Loft"),
+	(10, "Sobrado"),
+	(11, "Terreno Padrão"),
+
+)
 
 CATEGORIA = (
 	(0, "Alto Padrão"),
@@ -25,10 +40,12 @@ NEGOCIO = (
 
 class Imovel(models.Model):
 	id = models.BigAutoField(primary_key=True)
-	imagem = models.FileField (upload_to = 'media/', blank=True, null=True)	
-	categoria = models.TextField(choices=CATEGORIA, default=0)
-	negocio = models.TextField(choices=NEGOCIO, default=0)
 	titulo = models.CharField(max_length=250, unique=True)
+	propriedade = models.TextField(choices=TIPO_PROPRIEDADE, default=0)
+	negocio = models.TextField(choices=NEGOCIO, default=0)
+	categoria = models.TextField(choices=CATEGORIA, default=0)
+	imagem = models.FileField (upload_to = 'media/', blank=True, null=True)	
+	localizacao = models.CharField(max_length=300, unique=True)
 	endereco = models.CharField(max_length=300, unique=True)
 	area = models.IntegerField(unique=True)
 	num_quarto = models.IntegerField(unique=True)
