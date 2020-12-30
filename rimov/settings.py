@@ -27,8 +27,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles', 
-    'bootstrapform',         
-    'system',      
+    'bootstrapform', 
+    #Apps Internos        
+    'system',        
+           
+           
        
           
 ]
@@ -119,6 +122,9 @@ LOGIN_URL_REDIRECT = "painel/"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+# Usuários
+#AUTH_USER_MODEL = 'accounts.CustomUser'
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, "static"), '/var/www/static/', ]
@@ -131,7 +137,7 @@ MEDIA_ROOT = "{}/media".format(BASE_DIR)
 
 LOGIN_REDIRECT_URL = '/'
 
-LOGOUT_REDIRECT_URL = '/accounts/login'
+LOGOUT_REDIRECT_URL = '/users/login'
 
 #TEMPLATE_DIRS = (
 #    os.path.join(PROJECT_ROOT, 'templates'),

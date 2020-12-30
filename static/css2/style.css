@@ -435,7 +435,7 @@ a.logo:hover, a.logo:focus {
 }
 
 a.logo span {
-    color: #0074cb;
+    color: #f9cf06;
 }
 
 
@@ -2473,6 +2473,7 @@ ul.labels-info li img {
 }
 .wht-bg {
     background:#fff;
+    text-align: center;
 }
 .wht-bg h4 {
     font-size:24px;

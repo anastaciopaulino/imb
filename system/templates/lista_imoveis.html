@@ -19,12 +19,18 @@
             <th scope="col">ENDEREÇO</th>
             <th scope="col">CORRETOR</th>
             <th scope="col">AÇÕES</th>
+            <th scope="col">ID</th>
+            <th scope="col">PROPRIEDADE</th>
+            <th scope="col">IMAGEM</th>
+            <th scope="col">LOCALIZAÇÃO</th>
+            <th scope="col">ENDEREÇO</th>
+            <th scope="col">DESCRIÇÃO</th>
         </tr>
     </thead>
     <tbody>
         {% for imovel in imoveis %}
         <tr>
-            <th scope="row">{{ imovel.titulo }}</th>
+            <th scope="row">{{ imovel.id }}</th>
             <td>{{ imovel.categoria }}</td>
             <td>{{ imovel.negocio }}</td>
             <td>{{ imovel.area }}</td>
@@ -34,6 +40,12 @@
             <td>{{ imovel.status }}</td>
             <td>{{ imovel.endereco }}</td>
             <td>{{ imovel.corretor }}</td>
+            <td>{{ imovel.titulo}}</td>
+            <td>{{ system_imovel.propriedade }}</td>
+            <td>{{ imovel.imagem }}</td>
+            <td>{{ imovel.localizacao }}</td>
+            <td>{{ imovel.endereco }}</td>
+            <td>{{ imovel.descricao }}</td>
             <td>
                 <a href="/visualizar_corretor/{{ corretor.id }}"><i class="fa fa-search" aria-hidden="true">Visualizar</i></a>
                 <a href="/editar_corretor/{{ corretor.id }}"><i class="fa fa-pencil" >Editar</i></a>
@@ -44,3 +56,15 @@
     </tbody>
 </table>
 {% endblock %}
+
+    id = models.BigAutoField(primary_key=True)
+    
+    propriedade = models.TextField(choices=TIPO_PROPRIEDADE, default=0)
+    
+    imagem = models.FileField (upload_to = 'media/', blank=True, null=True) 
+    localizacao = models.CharField(max_length=300, unique=True)
+    endereco = models.CharField(max_length=300, unique=True
+    
+    descricao = models.TextField(unique=True)
+    
+    

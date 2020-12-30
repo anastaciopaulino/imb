@@ -1,11 +1,16 @@
-{% extends 'base.html' %} {% load bootstrap %} {% block title %}{% endblock %} {% block content %}
+{% extends 'base.html' %} 
+{% load bootstrap %} 
+{% block content %}
 
 <div class="container">
-    <h1 style="text-align: center;">Adicionar um Corretor</h1>
+    <h1 style="text-align: center;">Cadastrar um novo Corretor(a)</h1>
     <div>
         <form action="" method="POST">
-            {% csrf_token %} {{form|bootstrap}}
+            {% csrf_token %} 
+            {{form|bootstrap}}
             <input type="submit" class="btn btn-success" style="margin-left: 1050px;" value="Salvar">
+        	<input type="button" value="Voltar" style="margin-left: 1100px;" class="btn btn-info" onClick="history.go(-1)">
+
 
 
         </form>
