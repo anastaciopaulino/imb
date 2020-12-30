@@ -14,6 +14,8 @@ SECRET_KEY = '6%7#z+l(gj0io0qnx6me+84ub-a%z%19$81&9*g5jzcgql-8xh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+AUTH_USER_MODEL = 'accounts.User'
+
 ALLOWED_HOSTS = []
 
 
@@ -29,8 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles', 
     'bootstrapform', 
     #Apps Internos        
-    'system',        
-           
+    'system',
+    'accounts',
            
        
           
@@ -113,7 +115,6 @@ USE_TZ = True
 #Login#
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = '/painel/'
-
 
 LOGIN_URL = "/login/"
 LOGIN_URL_REDIRECT = "painel/"

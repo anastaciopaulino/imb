@@ -52,7 +52,7 @@ class Imovel(models.Model):
 	num_banheiro = models.IntegerField(unique=True)
 	num_vaga = models.IntegerField(unique=True)
 	descricao = models.TextField(unique=True)
-	corretor = models.ForeignKey(User, on_delete=models.CASCADE, related_name='system_imoveis')
+	corretor = models.ForeignKey(Corretor, on_delete=models.CASCADE, related_name='system_imoveis')
 	status = models.TextField(choices=STATUS, default=0)
 
 	class Meta:
@@ -75,8 +75,9 @@ class Galeria(models.Model):
 
 
 class Corretor(models.Model):
-	id = models.BigAutoField(primary_key=True)	
-	nome = models.ForeignKey(User, on_delete=models.CASCADE, related_name='system_corretores')
+	usuario = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+	id = models.BigAutoField(primary_key=True)
+	nome = models.CharField(max_length=255)
 	foto = models.FileField (upload_to = 'media/', blank=True, null=True)
 	numero_cri = models.IntegerField(default=0)
 	telefone = models.CharField(max_length=250, unique=True)
